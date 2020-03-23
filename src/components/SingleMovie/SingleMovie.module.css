@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-flow: row;
+  border-bottom: 3px solid grey;
+}
+
+.wrapper {
+  margin: 10px;
+}
+
+.descr {
+  padding: 20px;
+}
+
+.descr h3 {
+  margin: 10px 15px;
+}
+
+.descr p,
+.descr ul {
+  margin: 0 30px;
+}

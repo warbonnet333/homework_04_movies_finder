@@ -1,0 +1,21 @@
+.moviesPage {
+  padding: 0 30px;
+}
+
+.moviesPage h2 {
+  text-align: center;
+  margin: 10px;
+}
+
+.form{
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+.subm{
+  width: 60px;
+}
+
+
+
