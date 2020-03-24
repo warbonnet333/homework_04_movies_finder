@@ -15,8 +15,6 @@ export default class Cast extends Component {
 
   render() {
     const { cast } = this.state
-    return (
-      cast.length && <CastItem cast={cast} />
-    )
+    return cast.length && <CastItem cast={cast} />
   }
 }

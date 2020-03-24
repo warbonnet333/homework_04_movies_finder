@@ -20,7 +20,7 @@ FilmList.propTypes = {
     PropTypes.shape(
       {
         title: PropTypes.string.isRequired,
-        id: PropTypes.string
+        id: PropTypes.number
       }
     )
   )

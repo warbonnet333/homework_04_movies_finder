@@ -11,6 +11,7 @@ export default class HomePage extends Component {
   componentDidMount() {
     fetchAPI.fetchPopularFilms()
       .then(({ results }) => this.setState({ filmsList: results }))
+      .catch(console.log)
   }
 
 

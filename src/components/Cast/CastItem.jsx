@@ -19,9 +19,9 @@ CastItem.propTypes = {
   cast: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      id: PropTypes.string,
+      id: PropTypes.number,
       character: PropTypes.string.isRequired,
-      profile_path: PropTypes.string.isRequired
+      profile_path: PropTypes.string
     })
   )
 }

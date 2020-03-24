@@ -13,13 +13,12 @@ export default class Reviews extends Component {
     const id = getIdFromProps(this.props)
     fetchAPI.fetchReviewsById(id)
       .then(({ results }) => this.setState({ results }))
+      .catch(console.log)
   }
 
 
   render() {
     const { results } = this.state
-    return (
-      results.length ? <ReviewsList reviews={results} /> : <h3>We dont have reviews, sorry</h3>
-    )
+    return results.length ? <ReviewsList reviews={results} /> : <h3>We dont have reviews, sorry</h3>
   }
 }

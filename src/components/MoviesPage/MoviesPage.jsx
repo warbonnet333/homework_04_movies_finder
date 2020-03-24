@@ -8,7 +8,8 @@ import style from './MoviesPage.module.css'
 
 export default class MoviesPage extends Component {
   state = {
-    results: []
+    results: [],
+    value: ""
   }
 
   componentDidMount() {
@@ -40,7 +41,7 @@ export default class MoviesPage extends Component {
   }
 
 
-  hendleSubmit = async (e) => {
+  hendleSubmit = (e) => {
     e.preventDefault()
     const qsValue = getQueryFromLocation(this.props.location)
 
@@ -50,14 +51,14 @@ export default class MoviesPage extends Component {
   }
 
   render() {
-    const { results } = this.state
+    const { results, value } = this.state
     const qsValue = getQueryFromLocation(this.props.location)
     return (
       <div className={style.moviesPage} >
         <h2>Movies Page</h2>
 
         <form onSubmit={this.hendleSubmit} className={style.form}>
-          <input type="text" value={qsValue} onChange={this.hendleChange} placeholder="Try to find here" required />
+          <input type="text" value={qsValue ? qsValue : value} onChange={this.hendleChange} placeholder="Try to find here" required />
           <input className={style.subm} type="submit" value="Search" />
         </form>
         {results.length > 0 && <FilmList list={results} />

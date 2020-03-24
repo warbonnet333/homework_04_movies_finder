@@ -12,7 +12,9 @@ export default class SingleMovie extends Component {
 
   componentDidMount() {
     const id = getIdFromProps(this.props)
-    fetchAPI.fetchFilmById(id).then(film => this.setState({ film, id }))
+    fetchAPI.fetchFilmById(id)
+      .then(film => this.setState({ film, id }))
+      .catch(console.log)
   }
 
   goBackClick = () => {
