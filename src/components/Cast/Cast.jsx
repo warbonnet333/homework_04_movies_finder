@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as fetchAPI from "../../service/fetcheAPI"
 import getIdFromProps from '../../helpers/getIdFromProps'
-import CastItem from "./CastItem"
+import CastList from "./CastList"
 
 export default class Cast extends Component {
   state = { cast: [] }
@@ -15,6 +15,6 @@ export default class Cast extends Component {
 
   render() {
     const { cast } = this.state
-    return cast.length && <CastItem cast={cast} />
+    return cast.length && <CastList cast={cast} />
   }
 }

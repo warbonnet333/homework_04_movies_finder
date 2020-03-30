@@ -1,7 +1,26 @@
 .container {
   padding: 30px;
+  text-align: center;
 }
 
 .info {
-  margin: 10px;
+  margin: 10px auto;
+  width: 250px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+}
+
+.info li {
+  height: 30px;
+  width: 80px;
+  background-color: brown;
+  padding: 5px 0;
+}
+
+.info li a {
+  color: white;
+  text-decoration: none;
 }
